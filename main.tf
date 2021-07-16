@@ -54,7 +54,6 @@ resource "kubernetes_namespace" "sn_system" {
 }
 
 resource "kubernetes_namespace" "pulsar" {
-  count = var.pulsar_namespace_create ? 1 : 0
   metadata {
     name = var.pulsar_namespace
   }
